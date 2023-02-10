@@ -1,0 +1,62 @@
+<mat-card>
+    <mat-card-title> Fornecedor</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome"
+                [(ngModel)]="supplier.supplierName" name="supplierName">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Contato"
+                [(ngModel)]="supplier.supplierContactName" name="supplierContactName">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="E-mail"
+                [(ngModel)]="supplier.supplierEmail" name="supplierEmail">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Cnpj"
+                [(ngModel)]="supplier.supplierCnpj" name="supplierCnpj">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Endereço"
+                [(ngModel)]="supplier.supplierAddress" name="supplierAddress">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Cep"
+                [(ngModel)]="supplier.supplierPostalCode" name="supplierPostalCode">
+        </mat-form-field> 
+
+        <mat-form-field>
+            <input matInput placeholder="Cidade"
+                [(ngModel)]="supplier.supplierCity" name="supplierCity">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Estado"
+                [(ngModel)]="supplier.supplierState" name="supplierState">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Telefone"
+                [(ngModel)]="supplier.supplierPhone" name="supplierPhone">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Site"
+                [(ngModel)]="supplier.supplierHomePage" name="supplierHomePage">
+        </mat-form-field>
+    
+    </form>
+    <button mat-raised-button (click)="update()" class="edit">
+        Salvar
+    </button>
+    
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+</mat-card>

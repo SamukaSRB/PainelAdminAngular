@@ -1,0 +1,63 @@
+<mat-card>
+    <mat-card-title>Novo Cliente</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome"
+                [(ngModel)]="customer.customerName" name="customerName">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="E-mail"
+                [(ngModel)]="customer.customerEmail" name="customerEmail">
+        </mat-form-field>     
+
+        <mat-form-field>
+            <input matInput placeholder="Cep"
+                [(ngModel)]="customer.customerPostalCode" name="customerPostalCode">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Endereço"
+                [(ngModel)]="customer.customerAddress" name="customerAddress">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Cidade"
+                [(ngModel)]="customer.customerCity" name="customerCity">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Estado"
+                [(ngModel)]="customer.customerState" name="customerState">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Telefone"
+                [(ngModel)]="customer.customerPhone" name="customerPhone">
+        </mat-form-field>     
+
+        <mat-form-field>
+            <input matInput placeholder="Fornecedor"
+                [(ngModel)]="customer.supplierId" name="supplierId">
+        </mat-form-field>    
+        
+        <mat-form-field appearance="fill">
+            <mat-label>Select</mat-label>         
+
+             <mat-select [(ngModel)]="customer.supplierId"  (change)="ChangeSupplier($event)" name="supplierId">
+                <mat-option *ngFor = "let sup of Supplier" [value] ="sup.supplierId">
+                   {{sup.supplierName}}
+                </mat-option>
+              </mat-select>
+    
+        </mat-form-field>
+    
+    </form>
+    <button mat-raised-button (click)="update()" color="primary" >
+        Alterar
+    </button>
+    
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button> 
+</mat-card>

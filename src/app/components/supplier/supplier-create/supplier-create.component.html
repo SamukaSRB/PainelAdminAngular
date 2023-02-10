@@ -1,0 +1,62 @@
+<mat-card>
+    <mat-card-title>Novo Fornecedor</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome"
+                [(ngModel)]="supplier.supplierName" name="name">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Contato"
+                [(ngModel)]="supplier.supplierContactName" name="name">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="E-mail"
+                [(ngModel)]="supplier.supplierEmail" name="name">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Cnpj"
+                [(ngModel)]="supplier.supplierCnpj" name="name">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Cep"
+                [(ngModel)]="supplier.supplierPostalCode" name="name">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Endereço"
+                [(ngModel)]="supplier.supplierAddress" name="name">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Cidade"
+                [(ngModel)]="supplier.supplierCity" name="name">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Estado"
+                [(ngModel)]="supplier.supplierState" name="name">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Telefone"
+                [(ngModel)]="supplier.supplierPhone" name="name">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Site"
+                [(ngModel)]="supplier.supplierHomePage" name="name">
+        </mat-form-field>
+    
+    </form>
+    <button mat-raised-button (click)="createSupplier()" color="primary">
+        Salvar
+    </button>
+    
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+</mat-card>
